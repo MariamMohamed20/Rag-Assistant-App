@@ -1,0 +1,375 @@
+# Lecture 3 - Comparison Charts: Core Concepts Refresher
+
+---
+
+# Comparison charts (column & bar)
+Data Visualization
+
+---
+
+# Learning outcomes
+Concept refreshing in data visualization:
+(Chart Junk, Magnitude, Scalar, Vector, Univariate, Bivariate, Multivariate)
+What is meant by comparison charts?
+What are the different types of datasets?
+Which types of datasets are more relevant to column/bar charts?
+When to use a column chart?
+When to use a bar chart?
+Examples: (suggested dataset -> questions -> visualization -> answers)
+
+---
+
+# Concept refreshing - chart junk
+Refers to all visual elements in a chart that are not necessary to highlight the story or that distract the audience from the main point
+“Chart Junk is the direct cause of high Extraneous Load”
+Such as: Heavy gridlines, 3D effects on bars, unnecessary background images, or decorative icons that don't represent data. If a chart has too much junk, the extraneous load will increase, leading to high cognitive load and preventing the audience from answering questions in a few seconds.
+
+---
+
+---
+
+---
+
+# Concept refreshing - Magnitude
+Refers to the relative size or "how much" of something. It is a quantitative measure that tells the audience the "bigness" of a data point.
+
+If Apple sold 80 million phones and Samsung sold 40 million, the magnitude of Apple's sales is exactly double that of Samsung's. The visual length of the bar/column represents this magnitude.
+
+---
+
+---
+
+---
+
+Magnitude vs Distorted Magnitude
+
+---
+
+# Concept refreshing - scalar
+Refers to a single numerical value that represents only the magnitude. A scalar value is just a number that tells you, "how many" or "how much.”
+
+In the code: x = 50, then 50 is the scalar.
+Scalar = The Number.
+Magnitude = The "Bigness" of that number. And the visual representation of the scalar
+
+Comparison charts are used to visualize Scalar values. Each bar in a Column or Bar chart represents one scalar value (e.g., Temperature: 30°C, Sales: $500, Population: 1 million).
+
+---
+
+Scalar values are represented by using a scatter plot (No comparison needed) to show the temperature value of each city. Notice that there is no arrow telling us which way the temperature is 'pushing'.
+
+---
+
+Scalar values tell us 'how many’ employees are in each department, with no arrow showing where the employees are moving.
+
+---
+
+Scalar could have negative values.
+
+---
+
+Scalar could have negative values.
+
+---
+
+# Concept refreshing - vector
+Refers to a quantity that has both Magnitude (how much) and Direction (where).
+
+Scalar: "The wind speed is 20 km/h." (This is just a magnitude. You can use a Column chart to compare wind speeds in different cities).Vector: "The wind is blowing at 20 km/h towards the North-East." (This has magnitude AND direction. You would typically use a different type of visualization, like an arrow or a flow map, to show this).
+
+---
+
+A time series of price changes is a series of Signed Scalars (Not a vector) because you only see one fact per day
+
+---
+
+* The Direction of the arrow tells you a story. An arrow pointing to the 'Top-Right' means a healthy price increase. An arrow pointing to the 'Bottom-Left' means a price drop confirmed by high selling volume. That is the power of a Vector over a Scalar.* Price went up, and people were buying heavily (High volume)* Price went down, and people were selling heavily (High negative volume)* Vector could be "Positive" when moving toward a goal, and  negative when moving away from a goal.
+
+---
+
+# Concept refreshing - Univariate
+“Uni” means one. This is the simplest form of analyzing data where you examine only one variable at a time (highlight magnitude, frequency, or count and ignore causes and relationships)
+Uni (One) + Variate (Variable)Most simple Column and Bar charts used for basic ranking are univariate
+| Employee Name | Years of Experience (The Only Variable) | Age | Department |
+| --- | --- | --- | --- |
+| John | 3 | 24 | IT |
+| Sarah | 5 | 26 | IT |
+| Mike | 3 | 23 | Marketing |
+| Anna | 3 | 26 | Marketing |
+Imagine you have a list of 100 employees. Your spreadsheet has many columns: Name, Years of Experience, Age, Department, and Salary. If you hide every column except Years of Experience and just look at those numbers, you are doing Univariate Analysis. You aren't asking "Does age affect experience?" (That would be two variables). You are only asking "What do our experience levels look like?"
+
+---
+
+# Concept refreshing - Univariate
+The Three Questions of Univariate Analysis:
+(When you look at that one column of data, you only care about three things)
+
+1) The Central Tendency: What is the "average" or "middle" number? (Mean/Median).
+
+2) The Dispersion: How spread out are the numbers? Are they all close to 5 years, or do we have 1 year and 20 years? (Range/Standard Deviation).
+3) The Distribution: What is the "shape" of the data? (This is where the charts come in).
+
+There are two ways to visualize that one column of data:A. Categorical UnivariateB. Numerical Univariate
+
+---
+
+# Categorical Univariate
+The Condition: Use this when your one variable is attached to names or categories.The Question: The owner wants to know which type of drink is most popular.The Single Variable: Drink Type.The Goal: Compare the magnitude of sales between distinct categories.
+
+| Transaction ID | Drink Type (The Variable) |
+| --- | --- |
+| #001 | Latte |
+| #002 | Espresso |
+| #003 | Latte |
+| #004 | Americano |
+| #005 | Latte |
+
+---
+
+# Numerical Univariate
+
+The Condition: Use this when you don't care about names and just want to see the frequency of the numbers.
+The Question: The owner wants to know how much time customers spend in the shop.
+The Single Variable: Time Spent (in minutes).
+The Goal: Understand the distribution or "flow" of the day.
+| Customer ID | Minutes Spent (The Variable) |
+| --- | --- |
+| #101 | 12.5 |
+| #102 | 45.0 |
+| #103 | 18.2 |
+| #104 | 22.1 |
+| #105 | 58.9 |
+
+---
+
+# Concept refreshing - bivariate
+
+---
+
+# Concept refreshing – bivariate (Numerical vs. Numerical)
+
+The Scenario: We want to see if Price (Var 1) has a relationship with Units Sold (Var 2).
+
+The Variables: Two variables—Price and Units Sold.
+The Relationship: This is a Negative Correlation. As Price goes up, Units Sold go down.
+The Question: "Does the price of a phone affect how many units are sold?”
+In this example: A scatter plot is the "Gold Standard" for Bivariate analysis because it shows if one variable "moves" in response to the other.
+| Brand | Price (USD) (Var 1) | Units Sold (Millions) (Var 2) |
+| --- | --- | --- |
+| Brand A | 1200 | 15 |
+| Brand B | 800 | 35 |
+| Brand C | 500 | 55 |
+| Brand D | 300 | 80 |
+| Brand E | 150 | 110 |
+
+---
+
+# Concept refreshing – bivariate (Categorical vs. Numerical)
+
+The Scenario: We want to see if the Region (Variable 1: Categorical) influences the Average Sales Price (Variable 2: Numerical).
+The Variables: Region (Categorical) and Avg Sales Price (Numerical).
+The Relationship: We are looking at how the "Price" variable differs across "Region" groups.
+The Question: "Does the geographical location impact how much people are willing to pay for a phone?”In this example: a Column Chart is the best tool.
+| Region (Variable 1) | Avg Sales Price (Variable 2) |
+| --- | --- |
+| North America | $850 |
+| Europe | $780 |
+| Asia | $450 |
+| South America | $320 |
+
+---
+
+# Concept refreshing – bivariate (Categorical vs. Categorical)
+The Scenario: We want to see if Region (Var 1) has a relationship with Preferred Phone Color (Var 2).
+
+The Variables: Region (Categorical) and Color Preference (Categorical).
+The Relationship: Association. We are looking to see if certain regions are "associated" with certain color choices (e.g., Is Gold significantly more popular in Asia?).
+
+The Question: "Does the region influence which color of phone a customer chooses?"
+A Stacked Bar Chart is the best way to visualize this. It allows you to see the total volume of the first category (Region) while seeing the "split" of the second category (Color) inside it.
+
+| Region | Black | White | Gold | Total (by Region) |
+| --- | --- | --- | --- | --- |
+| North America | 50 | 30 | 20 | 100 |
+| Asia | 20 | 20 | 60 | 100 |
+| Europe | 40 | 40 | 20 | 100 |
+
+---
+
+# Concept refreshing - multivariate
+"Multi" means many. This involves the analysis of more than two variables at the same time to see how they interact.
+Imagine you are analyzing the sales of a tech company:
+   - If you only look at "Units Sold," that is Univariate.    - If you look at "Units Sold" vs. "Price," that is Bivariate.
+   - In Multivariate Analysis, you would look at:
+          Variable 1: Units Sold (The Magnitude).
+          Variable 2: Product Category (e.g., Laptops, Tablets).
+          Variable 3: Region (e.g., North America, Europe).          Variable 4: Time (e.g., Q1, Q2, Q3).
+
+---
+
+# What is meant by comparison charts?
+Comparison Charts are visual tools used to show the differences and similarities between two or more items or data points.
+
+It identify which item is the "best," the "largest," or the "fastest" by placing the values side-by-side or on a shared scale. Instead of looking at a single number in isolation
+
+---
+
+# What are the different types of datasets?
+Categorical: It consists of distinct groups or labels. There is no mathematical "middle ground" between them—an item belongs to one group or another. You can’t do mathematical operations (addition, multiplication, mean, median, etc.) on it. If you can't add, subtract, or average a certain data value meaningfully, it’s Categorical.Example: Brand names, City names, Departments, or Product types.
+
+| Product (Category) | Units Sold |
+| --- | --- |
+| Laptop | 1,200 |
+| Tablet | 850 |
+| Smartphone | 2,500 |
+
+---
+
+# What are the different types of datasets?
+Numerical: It consists of quantitative measurements (numbers). These numbers represent a scale where you can perform calculations like averages, sums, or ranges.
+
+Example: Prices, Heights, Ages, or Test Scores.
+
+| Customer ID | Age (Numerical) | Spend Amount (Numerical) |
+| --- | --- | --- |
+| #001 | 24 | $150 |
+| #002 | 45 | $1,200 |
+| #003 | 31 | $450 |
+
+---
+
+# What are the different types of datasets?
+Time Series: It is simply a list of numbers tracked in the order they happened. Think of it as a "Numerical dataset with a timeline." You aren't just comparing random values; you are comparing a value against the clock. The data must follow a sequence (Seconds, Minutes, Days, Months, or Years). If you shuffle the rows, the data loses its meaning.
+
+Example: Daily stock prices, Monthly revenue, or Yearly population growth.
+
+| Month (Time) | Revenue |
+| --- | --- |
+| January | $10,000 |
+| February | $12,500 |
+| March | $11,800 |
+
+---
+
+# What are the different types of datasets?
+Time Series: Imagine you track how many ice creams you sell every day for a week. Because you are looking for a Trend. You want to see if sales are going up as the week progresses toward the weekend. If you change the order of the days, the "story" of the week is destroyed.If you shuffle the days, you still have the numbers, but you lose the connection. And the data becomes numerical not time-series.
+
+| Day (Time) | Scoops Sold (Value) |
+| --- | --- |
+| Monday | 10 |
+| Tuesday | 15 |
+| Wednesday | 7 |
+| Thursday | 22 |
+
+---
+
+# Which types of datasets are more relevant to column/bar charts?
+| Dataset Type | Can I use Column/Bar? | When is it the "Accurate" choice? |
+| --- | --- | --- |
+| Categorical | YES | When the audience wants to rank items (Top 10). |
+| Numerical | YES | When comparing a summary (Average/Total) of the numbers. |
+| Time-Series | No | - |
+
+---
+
+# When to use a column chart?
+Column chart is best for seeing which item stands tallest. Like a podium.
+
+---
+
+# When to use a column chart?
+| Rule / Condition for Use | Unique Keywords | Audience Question Examples |
+| --- | --- | --- |
+| Comparison: use when you have few categories (under 7) and the names are short. It is designed to look like a "ranking podium." | Highest, Lowest, Least, Peak, Minimum, or Maximum | 1. Which specific region had the highest sales?  2. Which product reached the peak units sold?  3. Which department recorded the minimum budget?  4. Which branch had the lowest customer complaints?  5. What was the highest revenue-generating category? |
+
+---
+
+# How to Draw a column chart? (our guidelines)
+| Rule # | Guideline | Purpose / Description |
+| --- | --- | --- |
+| Rule 1 | Chart Border | Ensure a black frame surrounds the data area to define the workspace. |
+| Rule 2 | Zero Baseline | The Y-axis must start at 0 to avoid distorting the magnitude of the bars. |
+| Rule 3 | Horizontal/Vertical Text | All labels in the chart, such as those in the X-axis, Legends, Bottom, and Top titles, must be horizontal for easy reading, except the Y-axis, which must be vertically oriented. |
+| Rule 4 | Summarize Labels | Shorten long X-axis names (e.g., "Prod. A" instead of "Product Alpha Deluxe") to prevent overlap. |
+| Rule 5 | Show Magnitudes | Place the specific value (e.g., "82M") directly on or above each bar. |
+| Rule 6 | Include Legend | Place a legend (usually top-right) to explain what the bar colors represent. |
+| Rule 7 | Clear Titles | Every chart needs three: a Main Title, an X-axis Title, and a Y-axis Title. |
+| Rule 8 | Color Strategy | Use a uniform light color (e.g., lightblue) for most bars, and a different light color (e.g., lightgreen) for the Highest/Lowest. And black color for all the chart titles and labels. |
+| Rule 9 | Gridlines | Draw the gridlines to assist in reading the values. |
+| Rule 10 | Ordering | Show the "winner" on the far left. |
+
+---
+
+# How to Draw a column chart? (our guidelines)
+
+---
+
+# Practical Exercise 1: column chart
+1. The Task
+Perform a Categorical vs Numerical Bivariate Analysis to compare the performance of different sales branches. You must determine which branch is the top performer.
+
+2. The Dataset
+The following table shows the magnitude (the size or extent) of sales across four different locations. In this context, the sales figure is a scalar quantity for the fiscal year.
+
+| Branch | Sales Volume (USD) |
+| --- | --- |
+| North Office | 420,000 |
+| East Office | 580,000 |
+| South Office | 310,000 |
+| West Office | 490,000 |
+
+---
+
+# Practical Exercise 1: column chart
+3. The Audience Question
+"Based on the data provided, which branch reached the Maximum sales volume for the fiscal year?”
+
+Draw the most accurate visualization possible to answer the audience's question and follow the visualization guidelines.
+
+| Branch | Sales Volume (USD) |
+| --- | --- |
+| North Office | 420,000 |
+| East Office | 580,000 |
+| South Office | 310,000 |
+| West Office | 490,000 |
+
+---
+
+# Answers 1: Categorical vs Numerical Bivariate Analysis Task
+
+---
+
+# Practical Exercise 2: column chart
+1. The Task
+Perform a Categorical Univariate Analysis to identify the frequency of different drink orders. Your goal is to help the shop manager identify the Least Popular drink to decide if it should be removed from the menu.
+
+2. The Dataset
+This table represents the count (frequency) of items sold during the morning shift. Even though there are two columns, the "Count" is simply a summary of the single variable: Drink Type.
+
+| Drink Type (Category) | Count (Frequency) |
+| --- | --- |
+| Americano | 120 |
+| Latte | 150 |
+| Cappuccino | 90 |
+| Matcha | 30 |
+| Espresso | 65 |
+
+---
+
+# Practical Exercise 2: column chart
+3. The Audience Question
+"Based on the morning shift data, which drink type had the Minimum count, making it our least popular item?"
+
+Draw the most accurate visualization possible to answer the audience's question and follow the visualization guidelines.
+
+| Drink Type (Category) | Count (Frequency) |
+| --- | --- |
+| Americano | 120 |
+| Latte | 150 |
+| Cappuccino | 90 |
+| Matcha | 30 |
+| Espresso | 65 |
+
+---
+
+# Answers 2: Categorical univariate Analysis Task

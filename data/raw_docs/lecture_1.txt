@@ -1,0 +1,254 @@
+# Lecture 1 - Introduction to Data Visualization
+
+---
+
+# Introduction
+Data Visualization
+
+---
+
+# Course Points
+50 Points Final Exam (MCQ & Essay)
+30 Points Midterm Exam (MCQ Only)
+10 Points Section
+10 Points Practical Exam (Individually on Lab PC – Not project)
+
+---
+
+# Goal
+
+Datasets -> Questions -> Visualization -> Answers
+
+---
+
+# Steps we must follow to achieve the goal
+Step 1: Introduce the dataset.
+
+Step 2: Collect all the questions set by the audience (stockholders, decision makers, top managers, ordinary people, or even children in pre-school) regarding the dataset.
+
+---
+
+# Steps we must follow to achieve the goal
+Step 3: Select the most accurate visualization chart by using the cognitive load principle. To help the audience to answer their questions in few seconds (NOTE: if the audience spent a lot of time to understand the chart and to get an answer for their question, then it means you choose the wrong chart).
+
+---
+
+# Steps we must follow to achieve the goal
+Step 4: Draw the chart using a pencil and a plain paper.
+
+Step 5: Draw the chart using Python library (Plotly, Seaborn, Matplotlib).
+
+Step 6: Evaluating the selected chart by using the concept of “story telling” and getting answers.
+
+---
+
+# Important note
+To achieve the goal of the course:
+
+We are going to apply these 6 steps in each lecture until the end of the course
+
+---
+
+# Before diviing into the 6 steps
+At the beginning, we Must understand these concepts:
+Drag/Drop-diven approach vs Code-driven approach.(Power BI & Tableau vs Python Libraries)
+Visualizations Types: Exploratory vs Explanatory.
+Cognitive Load.
+Pre-attentive Attributes.
+
+---
+
+# Drag/Drop-diven vs Code-driven
+Drag/Drop diven approach:
+Power BI and Tableau: These are "Business Intelligence" (BI) tools. They are designed for speed and accessibility, allowing users to create dashboards quickly using a drag-and-drop interface.
+
+---
+
+# Drag/Drop-diven vs Code-driven
+Code diven approach:
+Python Libraries (Matplotlib, Seaborn, Plotly): These require writing code, which is more accurate for the Data Science students, visualization happens between data cleaning and machine learning. Using Python allows the student to keep the entire pipeline in one environment (like a Jupyter Notebook).
+
+---
+
+# Drag/Drop-diven vs Code-driven
+| Feature | Power BI / Tableau | Python Libraries (Winner !!) |
+| --- | --- | --- |
+| Primary User | Business Analysts / Managers | Data Scientists / Engineers |
+| Method | Drag-and-Drop UI | Programming (Step 5 of our plan) |
+| Scalability | Good for reporting and fast dashboards | Best for complex, custom AI/ML pipelines |
+| Interactivity | High (Built-in) | High (when using Plotly) |
+| Which Step | Step 5 | Step 5 |
+
+---
+
+# Drag/Drop-diven vs Code-driven
+And the winner is? for data science department
+Power BI and Tableau are excellent for corporate reporting, but as Data Scientists, we use Python because it gives us the power to build custom, reproducible, and deeply integrated visualizations that are part of a larger analytical AI/ML engine. This reinforces why our course focuses on libraries like Matplotlib, Seaborn, and Plotly
+
+Python Libraries (Such as Matplotlib, Seaborn, Plotly)
+
+---
+
+# Drag/Drop-diven vs Code-driven
+| Feature | Matplotlib | Seaborn | Plotly (Winner !!) |
+| --- | --- | --- | --- |
+| Code Efficiency | Low (Requires more lines for styling). | High (Very concise). | Medium (Declarative). |
+| Built-in Features | Basic; you must build everything manually. | High; handles themes and stats automatically. | High; includes legends, hover-data, and colors. |
+| Speed of Coding | Slower due to "low-level" commands. | Fast for statistical plots. | Fast for complex layouts. |
+| Interactivity | Static. No zoom or filter. | Static. No zoom or filter. | Fully Interactive. Zoom, pan, and hover. |
+
+---
+
+# Visualizations Types: Exploratory vs Explanatory
+|  | Exploratory | Explanatory |
+| --- | --- | --- |
+| Definition | "Data Visualization for Me”. It is the stage where the Data Scientist explores the dataset to find patterns, outliers, or trends that aren't immediately obvious. | "Data Visualization for Them”. You have already found the insight, and now you are explaining it to the audience (managers, stockholders, etc.). |
+| Goal | To understand what is happening in the data | To tell a story or answer a specific question in seconds. |
+| Characteristics | Often messy, numerous, and lacks polish. You might create 50 charts in an hour to find one interesting insight. | Highly polished, clear titles, no "chart junk," and focuses only on the relevant data. |
+| Which Step | Step 3 | Step 6 |
+
+---
+
+# Cognitive Load
+The total amount of mental effort being used in the audience's working memory to understand a chart.
+
+In Step 3 of our course plan: choosing the most accurate chart so the audience can answer questions in just a few seconds. If the cognitive load is too high, the audience spends too much time trying to process the visual, which means you have chosen the wrong chart.
+
+---
+
+# Cognitive Load
+| Load Type | High (Bad Case) | Low/Optimized (Good Case) |
+| --- | --- | --- |
+| Extraneous | Using 10 different colors for 10 bars just for "fun." The brain works hard to find a meaning for each color. | Using one single color for all bars so the brain ignores color and focuses on length. |
+| Intrinsic | Showing 100 brands on one Column Chart. The labels overlap and it's impossible to read. | Using a Bar Chart and showing only the "Top 10" brands to make the task manageable. |
+| Germane | The manager is confused and asks, "What am I looking at?". | The manager immediately says, "I see Apple is leading; let's invest more there!". |
+
+---
+
+# Cognitive Load
+The Three Types of Cognitive Load:
+
+| Type | Intrinsic Load | Extraneous Load | Germane Load |
+| --- | --- | --- | --- |
+| Definition | Effort required to understand the core information itself. | "bad" mental effort caused by poor design choices. It distracts the audience from the answer. | "good" mental effort. It is the energy the brain uses to learn the insight. |
+| Example | Comparing the sales of 2 brands (Easy) vs. comparing the sales of 50 brands (Hard). For 50 brands, a Bar Chart manages the intrinsic load better than a Column Chart because it allows for easy scrolling and readable labels. | Using 3D effects on a Column Chart. The audience must mentally "flatten" the image to see where the top of the bar hits the gridline. | A manager looks at your Bar Chart and thinks, "Xiaomi is surprisingly close to Apple in Europe; we need to increase our marketing budget there.”. We want to minimize Extraneous load so that 100% of the audience's brainpower can go toward Germane load. |
+( here, the difficulty comes from the content itself, not the design.
+Bad effort, This is what we should reduce or remove.
+
+---
+
+# Cognitive Load
+In the context of our Data Visualization course plan , our goal is to achieve the lowest cognitive load as much as possible, so the audience gets the answer in "few seconds".
+We must reach the ideal balance:
+
+Intrinsic Load (Low) + Extraneous Load (Dead) +  Germane Load (Low) = Low Cognitive load
+
+Intrinsic → simplify it
+Extraneous → remove it
+Germane → make it instant
+
+---
+
+# Cognitive Load
+Intrinsic Load (Manage it) - appropriate, not necessarily "low.” Some data is naturally complex; Your job is to choose a chart that makes this complexity manageable.
+
+Extraneous Load (Kill it) - as low as possible. This is the "noise" that prevents the audience from seeing the "signal.", you should remove unnecessary 3D effects or distracting backgrounds.
+
+Germane Load (Maximize it): as high as possible. High germane load means the audience is actually "learning"—their brain is working on the insight (e.g., "We are losing money in Europe!") rather than the chart mechanics (e.g., "What does this blue bar represent?").
+
+---
+
+# Cognitive Load
+
+We want to clear the 'trash' (Extraneous) and organize the 'work' (Intrinsic) so that the audience has 100% of their mental energy left for 'understanding' (Germane).”
+
+If the audience spends too much time trying to understand the chart, you have likely forced them to waste their mental energy on Intrinsic and Extraneous Load.
+
+---
+
+High Extraneous Load
+
+---
+
+High (not properly organized) Intrinsic Load
+
+---
+
+High (not properly organized) Intrinsic Load
+
+---
+
+High Extraneous Load
+
+---
+
+High (not properly organized) Intrinsic Load
+
+---
+
+High (not properly organized) Intrinsic Load
+
+---
+
+# Pre-attentive Attributes
+Visual properties that the human brain processes automatically, without conscious effort
+
+Guide viewer attention by making certain elements of a visualization stand out immediately, enabling fast recognition
+
+---
+
+# Pre-attentive Attributes
+
+---
+
+# Pre-attentive Attributes
+
+---
+
+# Pre-attentive Attributes
+
+---
+
+# Pre-attentive Attributes
+
+---
+
+# Pre-attentive Attributes
+
+---
+
+# Pre-attentive Attributes
+
+---
+
+# Pre-attentive Attributes
+
+Use color to Guide viewer attention and to lower extraneous load
+
+---
+
+Use color to lower extraneous load
+
+---
+
+Use size to lower extraneous load
+
+---
+
+# Pre-attentive Attributes
+The result of mastering the use of pre-attentive attributes is:
+Low Intrinsic LoadLow Extraneous LoadHigh Germane Load= Low Cognitive Load ;)
+
+---
+
+# Common mistakes
+
+---
+
+# Common mistakes
+
+---
+
+# Common mistakes
+
+---

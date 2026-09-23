@@ -1,0 +1,20 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Env files (never commit real secrets/config)
+.env
+
+# Logs
+*.log
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Notebook's local scratch vector store (the backend's copy under backend/data/vector_store
+# IS committed if under 50MB - see README - but this dev-time copy is not)
+notebooks/chroma_db/
+
+# OS junk
+.DS_Store

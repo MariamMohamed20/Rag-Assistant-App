@@ -1,0 +1,407 @@
+# Lecture 5 - Relationship Charts: Scatter, Bubble, and Network Charts
+
+---
+
+# relationship charts (scatter, bubble, Network)
+Scatter Plot: Prefer the data to be numerical, continuous, and High Cardinality
+Data Visualization
+
+---
+
+# Learning outcomes
+1) Concepts Refreshing:
+(Correlation, Continuous, Discrete, Arbitrary, Cardinality, Overplotting, Jittering, Binning)
+
+2) Scatter vs Bubble vs Network charts
+
+3) Exercises
+
+---
+
+# Correlation, Arbitrary, and Cardinality
+| Correlation | A statistical measure that describes the size and direction of a relationship between two variables. It tells us if two things "move together.” Positive Correlation: As X increases, Y also increases (e.g., Temperature vs. Ice Cream Sales, Years of experience vs. Salary). Negative Correlation: As X increases, Y decreases (e.g., Price of a product vs. Number of buyers). No Correlation: The movement of X has no predictable effect on Y. |
+| --- | --- |
+| Arbitrary | Data points (often in network chart) assigned randomly or for convenience, rather than being based on a natural scale or logical measurement. They are often used for identification or indexing purposes. Example: In network chart, The "Top" of the chart doesn't necessarily mean "High Value"—it’s just where the dot happened to be placed. |
+| Cardinality | The number of unique values in a dataset. High Cardinality: A column with a high percentage of unique values. For example: GPS coordinates (latitude/longitude). Every point is likely a different number. Low Cardinality: A column with very few unique values or categories. For example: "Employment Status" (Full-time, Part-time, Unemployed). There are only 3 unique possibilities for thousands of people. Also "Gender" has low cardinality. |
+
+---
+
+# Overplotting, Jittering, and binning
+| The "clutter" problem that happens with discrete numerical data |  |
+| --- | --- |
+| Overplotting Problem | Occurs when data points in a chart overlap to the extent that you can no longer distinguish individual points or see the true density of the data. This is extremely common with Low Cardinality or Discrete data. |
+| Jittering (The "Shake" Method) Solution 1 | It is a data visualization technique where you add a small amount of random "noise" (slight movement) to the position of each data point. This "shakes" the dots apart so you can see every individual record without changing the overall meaning of the data. |
+| Binning / Heatmaps (The "Bucket" Method) Solution 2 | Instead of drawing dots, you divide the chart into squares or hexagons. You color the square based on how many points fall inside it. |
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+# The Numerical Family (Quantitative)
+Numerical data is always about numbers. It answers, "How many?" or "How much?”
+
+Continuous (Measuring): Data that can be divided into smaller and smaller decimals. It has no "gaps.”. It is the data that can take any value in a range. Infinite possibilities.
+Example: A person's height (1.75m, 1.755m, 1.7552m), Temperature ($22.51$°C), weight, revenue. You can always be more precise.
+
+Discrete (Counting): Data that must be a "whole" number. You cannot have half of the item. It is the data that consists of "countable" whole numbers.
+Example: The number of students in a class (25 or 26). You cannot have 25.5 students. Also, the number of children (3), number of cars.
+
+---
+
+# The Categorical Family (Qualitative)
+Categorical data is about labels or groups. It answers, "What kind?”
+
+Discrete (Standard Categorical): Almost all categorical data is Discrete because you belong to one "bucket" or another. There is no "in-between.”
+	Ordered: Labels that follow a specific, logical sequence. Such as survey results (Poor, Good, Excellent), Seniority (Level 1, Level 2, Level 3, and Level 4).
+Unordered: Labels with no inherent "ranking" or "order." such as Blood Type (A, B, AB, O), Country (Egypt, USA), Color, Department.
+
+Continuous (Rarely used in Categories): Generally, we do not use the term "continuous" for categories.
+
+---
+
+| Data Family | Sub-Type | How to Identify | Example |
+| --- | --- | --- | --- |
+| Numerical | Continuous | Gaps and Infinite Possibilities | Price ($19.99), Weight (70.5kg) |
+| Numerical | Discrete | ”Countable" Whole Numbers | Number of cars (3), Goals scored (2) |
+| Categorical | Discrete | Ordered Groups | Poor, Good, Excellent |
+|  |  | Unordered Groups | Eye color (Blue), Country (Egypt) |
+
+---
+
+# Scatter vs Bubble vs network
+| Type | Reason for Use (Conditions) | Keywords | Variable Type (X vs Y) |
+| --- | --- | --- | --- |
+| Scatter | To see if one numerical variable affects another. Ideal for spotting patterns or "freak" occurrences. | Correlation, Outlier, Group, Cluster, Influence, Proportionality | Continuous vs. Continuous |
+| Bubble | To compare three numerical variables at once. It adds "Weight" to see if one numerical variable affects another. | Correlation, Outlier, Group, Cluster, Influence, Proportionality + (weight or size) | Continuous vs. Continuous (plus, Discrete/Continuous for Size) |
+| Network | To map how different entities are linked. It is about "Flow" and "Distance" rather than numbers on an axis. | Connectivity, Node, Path, Centrality, Hierarchy | Categorical vs. Categorical (Arbitrary Positioning) |
+
+---
+
+# How to Draw scatter and bubble chart? (our guidelines)
+| Rule # | Guideline | Purpose / Description |
+| --- | --- | --- |
+| Rule 1 | Chart Border | Ensure a black frame surrounds the data area to define the workspace. |
+| Rule 2 | Zero Baseline | The Y-axis must start at 0 to avoid distorting the magnitude of the plots. |
+| Rule 3 | Horizontal/Vertical Text | All labels in the chart, such as those in the X-axis, Legends, Bottom, and Top titles, must be horizontal for easy reading, except the Y-axis, which must be vertically oriented. |
+| Rule 4 | Include Legend | Place a legend (usually top-right) to explain what the plot colors represent. |
+| Rule 5 | Clear Titles | Every chart needs three titles: a Main Title, an X-axis Title, and a Y-axis Title. |
+| Rule 6 | Color Strategy | In case of one cluster: use one uniform light color (e.g., lightblue) with a black border for all plots. In case of more than one cluster: use one uniform light color with a black border for each cluster (e.g., lightblue for cluster A, lightgreen for cluster B, and lightred for cluster C). In case of outliers: use one uniform light color (e.g., lightblue) with a black border for all plots and a different light color (e.g., lightgreen) for the outliers. |
+| Rule 7 | Gridlines | Draw the gridlines to assist in reading the values. |
+| Rule 8 | Outliers Strategy | Add the label of the outlier if it is required in the audience question. |
+
+---
+
+# Practical Exercise 1: scatter plot
+1. The Task
+Perform a Numerical vs. Numerical Bivariate Analysis and analyze the relationship between the number of Research Hours invested and the number of Patents Filed across different scientific laboratories.
+
+2. The Dataset
+It shows Research Hours invested, and the number of Patents Filed across different scientific laboratories.
+
+| Scientific Laboratory | Total Research Hours (X) | Number of Patents Filed (Y) |
+| --- | --- | --- |
+| AI Lab | 120 | 5 |
+| Biotech Research | 250 | 12 |
+| Energy Division | 480 | 22 |
+| Robotics Wing | 600 | 30 |
+| Quantum Systems | 750 | 38 |
+| FinTech Group | 900 | 45 |
+| AgriTech Sector | 1050 | 52 |
+| Materials Science | 1200 | 60 |
+| SpaceX Division | 1350 | 68 |
+| MedTech Hub | 200 | 65 |
+
+---
+
+# Practical Exercise 1: scatter plot
+3. The Audience Question
+”Is there a Correlation between research hours and patent output, and which specific laboratory is identified as the high-performance Outlier? ”
+
+Draw the most accurate visualization possible to answer the audience's question and follow the visualization guidelines.
+
+| Scientific Laboratory | Total Research Hours (X) | Number of Patents Filed (Y) |
+| --- | --- | --- |
+| AI Lab | 120 | 5 |
+| Biotech Research | 250 | 12 |
+| Energy Division | 480 | 22 |
+| Robotics Wing | 600 | 30 |
+| Quantum Systems | 750 | 38 |
+| FinTech Group | 900 | 45 |
+| AgriTech Sector | 1050 | 52 |
+| Materials Science | 1200 | 60 |
+| SpaceX Division | 1350 | 68 |
+| MedTech Hub | 200 | 65 |
+
+---
+
+# Answers 1: scatter plot
+
+---
+
+# Practical Exercise 2: bubble chart
+1. The Task
+Perform a Numerical vs. Numerical Multivariate Analysis and analyze the relationship between Marketing Spend and Sales Revenue, and the Customer Base size of each region.
+
+2. The Dataset
+It show the Marketing Spend and Sales Revenue, and the Customer Base size of each region.
+
+| Regional Business Unit | Marketing Spend ($k) | Sales Revenue ($M) | Customer Base (Weight) |
+| --- | --- | --- | --- |
+| North America Sector | 500 | 15 | 500k |
+| Western Europe Hub | 450 | 14 | 450k |
+| Asia Pacific Market | 600 | 18 | 600k |
+| Latin America Division | 300 | 9 | 300k |
+| Middle East Group | 250 | 7 | 250k |
+| Eastern Europe Unit | 200 | 6 | 200k |
+| Scandinavia Branch | 150 | 5 | 150k |
+| Southeast Asia Core | 350 | 10 | 350k |
+| Oceania District | 100 | 3 | 100k |
+| Global Digital Hub | 80 | 20 | 1,200k |
+
+---
+
+# Practical Exercise 2: bubble chart
+3. The Audience Question
+"Is there a direct Proportionality between marketing spend and revenue for the main Group, and how does the Weight of the customer base Influence the high-performing Outlier?”
+
+Draw the most accurate visualization possible to answer the audience's question and follow the visualization guidelines.
+
+| Regional Business Unit | Marketing Spend ($k) | Sales Revenue ($M) | Customer Base (Weight) |
+| --- | --- | --- | --- |
+| North America Sector | 500 | 15 | 500k |
+| Western Europe Hub | 450 | 14 | 450k |
+| Asia Pacific Market | 600 | 18 | 600k |
+| Latin America Division | 300 | 9 | 300k |
+| Middle East Group | 250 | 7 | 250k |
+| Eastern Europe Unit | 200 | 6 | 200k |
+| Scandinavia Branch | 150 | 5 | 150k |
+| Southeast Asia Core | 350 | 10 | 350k |
+| Oceania District | 100 | 3 | 100k |
+| Global Digital Hub | 80 | 20 | 1,200k |
+
+---
+
+# Answers 2: bubble chart
+
+---
+
+1. The Task
+Perform a Categorical vs Categorical Bivariate Analysis and analyze the Satisfaction Score and Performance Rating for a sample of 10 employees.
+
+2. The Dataset
+It show the Satisfaction Score and Performance Rating for a sample of 10 employees (representing a larger 200-person trend).
+
+# Practical Exercise 3: scatter plot
+| Employee ID | Satisfaction Score | Performance Rating | Jittering Random Numbers (-0.15, +0.15) | Final Jittered Plotting Position |
+| --- | --- | --- | --- | --- |
+| EMP\_001 | 5 | 5 | (+0.08, -0.04) | (5.08, 4.96) |
+| EMP\_002 | 5 | 5 | (-0.12, +0.07) | (4.88, 5.07) |
+| EMP\_003 | 4 | 4 | (+0.02, +0.11) | (4.02, 4.11) |
+| EMP\_004 | 2 | 2 | (-0.05, -0.09) | (1.95, 1.91) |
+| EMP\_005 | 3 | 4 | (+0.14, -0.02) | (3.14, 3.98) |
+| EMP\_006 | 4 | 5 | (-0.07, +0.05) | (3.93, 5.05) |
+| EMP\_007 | 1 | 2 | (+0.01, -0.13) | (1.01, 1.87) |
+| EMP\_008 | 4 | 4 | (-0.03, +0.06) | (3.97, 4.06) |
+| EMP\_009 | 5 | 4 | (+0.09, -0.01) | (5.09, 3.99) |
+| EMP\_010 | 5 | 5 | (+0.05, +0.12) | (5.05, 5.12) |
+
+---
+
+# Practical Exercise 3: scatter plot
+3. The Audience Question
+”Where is the primary Cluster of employees located, and does a high satisfaction score have an Influence on the performance rating?”
+
+Draw the most accurate visualization possible to answer the audience's question and follow the visualization guidelines.
+
+| Employee ID | Satisfaction Score | Performance Rating | Jittering Random Numbers (-0.15, +0.15) | Final Jittered Plotting Position |
+| --- | --- | --- | --- | --- |
+| EMP\_001 | 5 | 5 | (+0.08, -0.04) | (5.08, 4.96) |
+| EMP\_002 | 5 | 5 | (-0.12, +0.07) | (4.88, 5.07) |
+| EMP\_003 | 4 | 4 | (+0.02, +0.11) | (4.02, 4.11) |
+| EMP\_004 | 2 | 2 | (-0.05, -0.09) | (1.95, 1.91) |
+| EMP\_005 | 3 | 4 | (+0.14, -0.02) | (3.14, 3.98) |
+| EMP\_006 | 4 | 5 | (-0.07, +0.05) | (3.93, 5.05) |
+| EMP\_007 | 1 | 2 | (+0.01, -0.13) | (1.01, 1.87) |
+| EMP\_008 | 4 | 4 | (-0.03, +0.06) | (3.97, 4.06) |
+| EMP\_009 | 5 | 4 | (+0.09, -0.01) | (5.09, 3.99) |
+| EMP\_010 | 5 | 5 | (+0.05, +0.12) | (5.05, 5.12) |
+
+---
+
+# Answers 3: scatter plot
+
+---
+
+# Network chart
+| Feature | Scatter / Bubble Charts | Network Charts |
+| --- | --- | --- |
+| Primary System | Coordinate System (X and Y axes) | Connectivity System (Nodes and Edges) |
+| Positioning | Fixed: Based on magnitude/measurement | Arbitrary: Based on layout convenience |
+| Components | Plots representing data points | Nodes (entities) and Edges (links) |
+| Visual Goal | To see Correlation and Proportionality | To see Connectivity and Paths |
+
+---
+
+# Network chart
+
+| The Scatter Plot (Left): If we moved that dot to the left, its Value would change. |
+| --- |
+| The Network Chart (Right): If we moved 'Node X' to the top of the screen, the Relationship remains exactly the same. Its position is just for visual convenience. |
+
+---
+
+# Network chart layouts
+
+---
+
+# Network chart
+| Type | Reason for Use (Conditions) | Keywords | Variable Type |
+| --- | --- | --- | --- |
+| Network | To map how different entities are linked. It is about "Flow" and "Distance" rather than numbers on an axis. | Connectivity, Node, Path, Centrality, Hierarchy | Categorical vs. Categorical (Arbitrary Positioning). Can’t be used with Numerical vs. Numerical analysis, whether discrete or continuous. |
+
+---
+
+# How to Draw network chart? (our guidelines)
+| Rule # | Guideline | Purpose / Description |
+| --- | --- | --- |
+| Rule 1 | Chart Border | Ensure a black frame surrounds the data area to define the workspace. |
+| Rule 2 | Edges | Avoid edge intersections.Write the label on/inside the edge and summarize it in case of long labels.Color all the edges using black. |
+| Rule 3 | Nodes | Must have a black border. Write the label inside the node and summarize it in case of long labels.Color all the nodes using lightblue. |
+| Rule 4 | Path | Use a black dashed line for the edges. Use a dashed border for all the nodes inside the path. Color all the nodes inside the path using lightgreen. |
+| Rule 5 | Centrality | Color all the nodes using lightblue, except the central node; use lightgreen color. Use a dashed border for the central node. |
+| Rule 6 | Include Legend | Place a legend (usually top-right) to explain what the edge/node colors represent. |
+| Rule 7 | Clear Titles | Network chart needs only one title: Main Title. |
+
+---
+
+# Practical Exercise 1: network chart
+1. The Task
+Perform a Categorical vs Categorical Multivariate Analysis. Visualize the Connectivity type between cities.
+
+2. The Dataset
+The dataset shows the global logistics routes between different cities.
+| Source Hub | Target Hub | Route Type |
+| --- | --- | --- |
+| Cairo | Dubai | Air Freight |
+| Cairo | London | Cargo Flight |
+| Cairo | Singapore | Maritime Route |
+| Cairo | Shanghai | Rail Link |
+| Cairo | New York | Transatlantic |
+| Dubai | Shanghai | Shipping Lane |
+| Singapore | Tokyo | Regional Rail |
+| Tokyo | Shanghai | Regional Rail |
+| London | New York | Flight Route |
+
+---
+
+# Practical Exercise 1: Network chart
+3. The Audience Question
+”What is the shortest Path to move goods from Shanghai to New York?"
+
+Draw the most accurate visualization possible to answer the audience's question and follow the visualization guidelines.
+
+| Source Hub | Target Hub | Route Type |
+| --- | --- | --- |
+| Cairo | Dubai | Air Freight |
+| Cairo | London | Cargo Flight |
+| Cairo | Singapore | Maritime Route |
+| Cairo | Shanghai | Rail Link |
+| Cairo | New York | Transatlantic |
+| Dubai | Shanghai | Shipping Lane |
+| Singapore | Tokyo | Regional Rail |
+| Tokyo | Shanghai | Regional Rail |
+| London | New York | Flight Route |
+
+---
+
+# Answers 1: network chart
+
+---
+
+# Practical Exercise 2: network chart
+1. The Task
+Perform a Categorical vs Categorical Multivariate Analysis to map the connectivity of a Smart Home IoT network.
+
+2. The Dataset
+The dataset determine the objects infrastructure for the entire ecosystem.
+
+| Source Object | Target Object | Connection Type |
+| --- | --- | --- |
+| Smart Hub | Smart Light | Uplink |
+| Smart Hub | Security Cam | Wi-Fi |
+| Smart Hub | Thermostat | Bluetooth |
+| Smart Hub | Smart Lock | Z-Wave |
+| Security Cam | Cloud Storage | Uplink |
+| Smart Light | Motion Sensor | Mesh |
+| Motion Sensor | Smart Lock | Trigger |
+
+---
+
+# Practical Exercise 2: Network chart
+3. The Audience Question
+"Based on the distribution of connections in this IoT network, which device exhibits the highest Centrality, and how is it visually distinguished from the peripheral devices?"
+
+Draw the most accurate visualization possible to answer the audience's question and follow the visualization guidelines.
+
+| Source Object | Target Object | Connection Type |
+| --- | --- | --- |
+| Smart Hub | Smart Light | Uplink |
+| Smart Hub | Security Cam | Wi-Fi |
+| Smart Hub | Thermostat | Bluetooth |
+| Smart Hub | Smart Lock | Z-Wave |
+| Security Cam | Cloud Storage | Uplink |
+| Smart Light | Motion Sensor | Mesh |
+| Motion Sensor | Smart Lock | Trigger |
+
+---
+
+# Answers 2: network chart
+
+---
+
+# Practical Exercise 3: network chart
+1. The Task
+Perform a Categorical vs Categorical Multivariate Analysis to map the Sterling family tree.
+
+2. The Dataset
+The dataset show the Generation Line from the Great-Grandparents down to a specific grandchild to understand the direct line of succession.
+
+| Source Node | Target Node | Relationship |
+| --- | --- | --- |
+| Arthur & Rose | James Sterling | Parent to Son |
+| James Sterling | Robert Sterling | Parent to Son |
+| James Sterling | Linda Sterling | Parent to Daughter |
+| Robert Sterling | William Sterling | Parent to Son |
+| Linda Sterling | Chloe Sterling | Parent to Daughter |
+| Linda Sterling | David Sterling | Parent to Son |
+
+---
+
+# Practical Exercise 3: Network chart
+3. The Audience Question
+"Trace the direct Path of succession from the patriarchs Arthur & Rose down to Chloe Sterling. Which nodes are part of this specific lineage, and how does the visual hierarchy distinguish them from the other branches?"
+
+Draw the most accurate visualization possible to answer the audience's question and follow the visualization guidelines.
+
+| Source Node | Target Node | Relationship |
+| --- | --- | --- |
+| Arthur & Rose | James Sterling | Parent to Son |
+| James Sterling | Robert Sterling | Parent to Son |
+| James Sterling | Linda Sterling | Parent to Daughter |
+| Robert Sterling | William Sterling | Parent to Son |
+| Linda Sterling | Chloe Sterling | Parent to Daughter |
+| Linda Sterling | David Sterling | Parent to Son |
+
+---
+
+# Answers 3: network chart

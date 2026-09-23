@@ -1,0 +1,119 @@
+# Lecture 2 - Comparison Charts: Bar and Column Charts
+
+---
+
+# Comparison charts (column & bar)
+Data Visualization
+
+---
+
+# Learning outcomes
+1) When to use a bar chart?
+
+2) Exercises
+
+---
+
+# When to use a bar chart?
+
+Bar Chart = "Show me the list from best to worst" question, especially when there are many/long names. Like the Leaderboard.
+
+---
+
+# When to use a bar chart?
+| Rule / Condition for Use | Unique Keywords | Audience Question Examples |
+| --- | --- | --- |
+| Use when you have long category names or a large number of items (e.g., Top 10 or Top 20) that need to be ranked horizontally. | Ranking, Top 10, Bottom 5, or Standings | 1. Show me the top 10 most profitable products.  2. What is the current ranking of our 15 sales reps?  3. Which are the bottom 5 performing stores this year?  4. Can we see the standings of all 12 marketing campaigns?  5. Provide a ranking of the most popular search terms. |
+
+---
+
+# How to Draw a bar chart? (our guidelines)
+| Rule # | Guideline | Purpose / Description |
+| --- | --- | --- |
+| Rule 1 | Chart Border | Ensure a black frame surrounds the data area to define the workspace. |
+| Rule 2 | Zero Baseline | The Y-axis must start at 0 to avoid distorting the magnitude of the bars. |
+| Rule 3 | Horizontal/Vertical Text | All labels in the chart, such as those in the X-axis, Legends, Bottom, and Top titles, must be horizontal for easy reading, except the Y-axis, which must be vertically oriented. |
+| Rule 4 | Show Magnitudes | Place the specific value (e.g., "82M") directly on or above each bar. |
+| Rule 5 | Include Legend | Place a legend (usually top-right) to explain what the bar colors represent. |
+| Rule 6 | Clear Titles | Every chart needs three: a Main Title, an X-axis Title, and a Y-axis Title. |
+| Rule 7 | Color Strategy | Use a uniform light color (e.g., lightblue) for most bars, and a different light color (e.g., lightgreen) for the Highest/Lowest. And black color for all the chart titles and labels. |
+| Rule 8 | Gridlines | Draw the gridlines to assist in reading the values. |
+| Rule 9 | Ordering | Order the magnitudes from top to bottom or vice versa based on the question’s type. |
+
+---
+
+# How to Draw a bar chart? (our guidelines)
+
+---
+
+# Practical Exercise 1: bar chart
+1. The Task
+Perform a Categorical Univariate Analysis to establish the final Standings of fruit sales. You need to identify which item is at the Bottom of the list to help the vendor optimize their inventory.
+
+2. The Dataset
+The following table shows the frequency of sales for different fruit varieties.
+
+| Fruit Variety (Category) | Total Count (Frequency) |
+| --- | --- |
+| Golden Delicious Apples | 85 |
+| Organic Cavendish Bananas | 110 |
+| Fresh Tropical Pineapples | 40 |
+| Sweet Ripe Strawberries | 95 |
+| Large Seedless Watermelons | 25 |
+
+---
+
+# Practical Exercise 1: bar chart
+3. The Audience Question
+"Based on the sales Ranking, which fruit variety is currently at the Bottom of our list?"
+
+Draw the most accurate visualization possible to answer the audience's question and follow the visualization guidelines.
+
+| Fruit Variety (Category) | Total Count (Frequency) |
+| --- | --- |
+| Golden Delicious Apples | 85 |
+| Organic Cavendish Bananas | 110 |
+| Fresh Tropical Pineapples | 40 |
+| Sweet Ripe Strawberries | 95 |
+| Large Seedless Watermelons | 25 |
+
+---
+
+# Answers 1: Categorical univariate Analysis Task
+
+---
+
+# Practical Exercise 2: bar chart
+1. The Task
+Perform a Categorical vs. Categorical Bivariate Analysis (Nominal vs. Ordinal). You are analyzing the quality of service across various airlines. Instead of counting flights, you are looking at the Average Service Rating (on a 1-5 Star scale). Your goal is to identify which airline is at the Bottom of the Standings to issue a service warning.
+
+2. The Dataset
+This table shows the average rating for each airline. This is bivariate because we are mapping a brand (Category 1) to a specific quality level (Category 2: The Star Rating).
+
+| Airline Brand (Nominal Category) | Service Rating (Ordinal Category/Scale) |
+| --- | --- |
+| Global Skyways International | 4.8 Stars |
+| Atlantic Premier Carriers | 4.5 Stars |
+| Northern Star Aviation Group | 3.9 Stars |
+| Emerald Coast Regional Air | 3.2 Stars |
+| Pacific Horizon Airways | 2.1 Stars |
+
+---
+
+# Practical Exercise 2: bar chart
+3. The Audience Question
+"Based on the latest quality Ranking, which airline brand is currently at the Bottom of our Standings?"
+
+Draw the most accurate visualization possible to answer the audience's question and follow the visualization guidelines.
+
+| Airline Brand (Nominal Category) | Service Rating (Ordinal Category/Scale) |
+| --- | --- |
+| Global Skyways International | 4.8 Stars |
+| Atlantic Premier Carriers | 4.5 Stars |
+| Northern Star Aviation Group | 3.9 Stars |
+| Emerald Coast Regional Air | 3.2 Stars |
+| Pacific Horizon Airways | 2.1 Stars |
+
+---
+
+# Answers 2: Categorical vs. Categorical Bivariate Analysis

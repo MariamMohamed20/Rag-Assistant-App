@@ -1,0 +1,268 @@
+# Lecture 4 - Comparison Charts: Stacked and Clustered Charts
+
+---
+
+# Comparison charts (Stacked, clustered)
+Data Visualization
+
+---
+
+# Learning outcomes
+1) When to use a stacked chart?
+2) When to use a clustered chart?
+3) Exercises
+
+---
+
+# When to use a stacked chart?
+
+Stacked chart is about composition. It is used when you want to show how a total amount is divided into different sub-groups or segments.
+
+---
+
+# When to use a stacked chart?
+| Rule / Condition for Use | Unique Keywords | Audience Question Examples |
+| --- | --- | --- |
+| Total/Internal Segments Relationship: Use when the primary goal is to show the total magnitude of a category while simultaneously showing the internal segments. | Composition, Breakdown, Contribution, Mix, Ratio, Proportion, Cumulative, Sum, Sub-division, Segment | "What is the total budget for the year, and how much of it is contributed by each department?" |
+|  |  | "Which region has the highest sales, and what is the product mix (Tablets vs. Laptops) in that region?" |
+|  |  | "How is our total workforce broken down by seniority level across all global branches?" |
+
+---
+
+# How to Draw a stacked chart? (our guidelines)
+| Rule # | Guideline | Purpose / Description |
+| --- | --- | --- |
+| Rule | Color Strategy | Use the lighter and darker versions of the same color for the segments, for instance: “lightblue”, “steelblue”, and “blue” for all the bars and a different color (e.g., “lightgreen”, “seagreen”, and “green”) for the Highest/Lowest. And black color for all the chart titles and labels. |
+| … | … | … |
+| … | … | … |
+| … | … | … |
+NOTE: The stacked chart will follow the same guidelines for the bar or column chart based on the task itself. Except for the color rule.
+
+---
+
+# When to use a clustered chart?
+
+Clustered chart is about side-by-side comparison. In a clustered chart, sub-categories sit side-by-side on the same baseline. This makes it much easier for the audience to compare the individual heights of the "segments" across different categories, though it becomes harder to see the total sum.
+
+---
+
+# When to use a clustered chart?
+| Rule / Condition for Use | Unique Keywords | Audience Question Examples |
+| --- | --- | --- |
+| Grouped Evaluation: Use when you want to show sub-categories together without combining them into a single total. | Leader, Difference, Gap, and Side-by-side | "Who is the clear Leader in sales between the Junior and Senior teams for each region?" |
+|  |  | "What is the Difference in price between our product and the competitors, and how large is that Gap across different cities?" |
+|  |  | "When we look at Budget vs. Actual spending Side-by-side, which department stayed on track?" |
+
+---
+
+# How to Draw a clustered chart? (our guidelines)
+| Rule # | Guideline | Purpose / Description |
+| --- | --- | --- |
+| Rule | Color Strategy | Use the lighter and darker versions of the same color for the segments, for instance: “lightblue”, “steelblue”, and “blue” for all the bars and a different color (e.g., “lightgreen”, “seagreen”, and “green”) for the Highest/Lowest. And black color for all the chart titles and labels. |
+| … | … | … |
+| … | … | … |
+| … | … | … |
+NOTE: The clustered chart will follow the same guidelines for the bar or column chart based on the task itself. Except for the color rule.
+
+---
+
+# Practical Exercise 1: stacked chart
+1. The Task
+Perform a Categorical vs. Numerical Bivariate Analysis. Your goal is to visualize the revenue Breakdown for a global corporation. You must show the Contribution of two different revenue streams (Software and Hardware) to the total regional sales and identify which regional unit has the smallest overall impact.
+
+2. The Dataset
+This table shows the revenue (in thousands) divided into two segments. The "Total" is the sum of these segments.
+
+| Regional Business Unit | Software Sales ($k) | Hardware Sales ($k) | Total Revenue ($k) |
+| --- | --- | --- | --- |
+| Asia-Pacific Emerging Economies | 520 | 230 | 750 |
+| North American Enterprise Division | 450 | 350 | 800 |
+| European Union Strategic Markets | 380 | 270 | 650 |
+| Latin American Growth Sector | 210 | 90 | 300 |
+| Middle East and Africa Hub | 140 | 60 | 200 |
+
+---
+
+# Practical Exercise 1: stacked chart
+3. The Audience Question
+"Based on the regional Composition, which business unit is at the Bottom of the total revenue Ranking?"
+
+Draw the most accurate visualization possible to answer the audience's question and follow the visualization guidelines.
+
+| Regional Business Unit | Software Sales ($k) | Hardware Sales ($k) | Total Revenue ($k) |
+| --- | --- | --- | --- |
+| Asia-Pacific Emerging Economies | 520 | 230 | 750 |
+| North American Enterprise Division | 450 | 350 | 800 |
+| European Union Strategic Markets | 380 | 270 | 650 |
+| Latin American Growth Sector | 210 | 90 | 300 |
+| Middle East and Africa Hub | 140 | 60 | 200 |
+
+---
+
+# Answers 1: stacked chart
+
+---
+
+# Practical Exercise 2: stacked chart
+1. The Task
+Perform a Categorical vs. Numerical Bivariate Analysis. Your goal is to analyze the Mix of New vs. Returning customers across various marketing channels. By normalizing all bars to 100%.
+
+2. The Dataset
+In this dataset, the raw counts are converted into percentages to show the Part-to-Whole contribution of each segment.
+
+| Marketing Channel | New Customers % | Returning Customers % |
+| --- | --- | --- |
+| Email Marketing Campaigns | 25% | 75% |
+| Direct Website Traffic | 30% | 70% |
+| Social Media Advertising | 45% | 55% |
+| Search Engine Optimization | 60% | 40% |
+| Affiliate Referral Partners | 75% | 25% |
+
+---
+
+# Practical Exercise 2: stacked chart
+3. The Audience Question
+"Looking at the Breakdown of our traffic, which marketing channel is at the Bottom of the Ranking for attracting New Customers?"
+
+Draw the most accurate visualization possible to answer the audience's question and follow the visualization guidelines.
+
+| Marketing Channel | New Customers % | Returning Customers % |
+| --- | --- | --- |
+| Email Marketing Campaigns | 25% | 75% |
+| Direct Website Traffic | 30% | 70% |
+| Social Media Advertising | 45% | 55% |
+| Search Engine Optimization | 60% | 40% |
+| Affiliate Referral Partners | 75% | 25% |
+
+---
+
+# Answers 2: stacked chart
+
+---
+
+# Practical Exercise 3: stacked chart
+1. The Task
+Perform a Categorical vs. Numerical Bivariate Analysis. You are analyzing the Composition of budget spending (Personnel vs. Operations).
+
+2. The Dataset
+The dataset contains 12 departments with Personnel Costs, Operational Costs, and Total Volume.
+
+| Department Name | Personnel Costs | Operational Costs | Total Volume |
+| --- | --- | --- | --- |
+| Global Information Technology Infrastructure | 800 | 400 | 1200 |
+| Advanced Research and Development Wing | 700 | 350 | 1050 |
+| Strategic Marketing and Brand Identity | 600 | 300 | 900 |
+| Customer Success and Experience Group | 500 | 250 | 750 |
+| Human Resources and Talent Acquisition | 400 | 200 | 600 |
+| Logistics and Supply Chain Management | 350 | 150 | 500 |
+| Legal and Corporate Governance Dept | 300 | 100 | 400 |
+| Quality Assurance and Testing | 200 | 50 | 250 |
+| Facilities and Maintenance Support | 150 | 40 | 190 |
+| Corporate Social Responsibility | 100 | 30 | 130 |
+| Public Relations and Media | 80 | 20 | 100 |
+| Internal Audit and Risk | 50 | 10 | 60 |
+
+---
+
+# Practical Exercise 3: stacked chart
+3. The Audience Question
+"Based on the Breakdown of our budget, which department reached the Highest Peak in total spending Volume?"
+
+Draw the most accurate visualization possible to answer the audience's question and follow the visualization guidelines.
+
+| Department Name | Personnel Costs | Operational Costs | Total Volume |
+| --- | --- | --- | --- |
+| Global Information Technology Infrastructure | 800 | 400 | 1200 |
+| Advanced Research and Development Wing | 700 | 350 | 1050 |
+| Strategic Marketing and Brand Identity | 600 | 300 | 900 |
+| Customer Success and Experience Group | 500 | 250 | 750 |
+| Human Resources and Talent Acquisition | 400 | 200 | 600 |
+| Logistics and Supply Chain Management | 350 | 150 | 500 |
+| Legal and Corporate Governance Dept | 300 | 100 | 400 |
+| Quality Assurance and Testing | 200 | 50 | 250 |
+| Facilities and Maintenance Support | 150 | 40 | 190 |
+| Corporate Social Responsibility | 100 | 30 | 130 |
+| Public Relations and Media | 80 | 20 | 100 |
+| Internal Audit and Risk | 50 | 10 | 60 |
+
+---
+
+# Answers 3: stacked chart
+
+---
+
+# Practical Exercise 4: clustered chart
+1. The Task
+Perform a Categorical vs. Numerical Bivariate Analysis. You are comparing the performance of various "Specialized Consulting Divisions" over two consecutive years. Your goal is to show the data Side-by-side to identify the Leader and measure the performance Gap.
+
+2. The Dataset
+The dataset show the performance of various "Specialized Consulting Divisions" over two consecutive years.
+
+| Consulting Division | 2024 Revenue ($M) | 2025 Revenue ($M) |
+| --- | --- | --- |
+| Digital Transformation Strategy Group | 4.2 | 5.8 |
+| Sustainable Energy Solutions Unit | 3.8 | 3.5 |
+| Cloud Infrastructure Architecture | 5.1 | 5.2 |
+| Artificial Intelligence Ethics Lab | 2.1 | 4.9 |
+| Supply Chain Resilience Partners | 3.5 | 3.9 |
+
+---
+
+# Practical Exercise 4: clustered chart
+3. The Audience Question
+"When looking at the 2024 and 2025 performance Side-by-side, how large is the Gap compared to its previous year's Difference?"
+
+Draw the most accurate visualization possible to answer the audience's question and follow the visualization guidelines.
+
+| Consulting Division | 2024 Revenue ($M) | 2025 Revenue ($M) |
+| --- | --- | --- |
+| Digital Transformation Strategy Group | 4.2 | 5.8 |
+| Sustainable Energy Solutions Unit | 3.8 | 3.5 |
+| Cloud Infrastructure Architecture | 5.1 | 5.2 |
+| Artificial Intelligence Ethics Lab | 2.1 | 4.9 |
+| Supply Chain Resilience Partners | 3.5 | 3.9 |
+
+---
+
+# Answers 4: clustered chart
+
+---
+
+# Practical Exercise 5: clustered chart
+1. The Task
+Perform a Categorical vs. Numerical Bivariate Analysis. You are comparing the sales Volume of two different product lines.
+
+2. The Dataset
+The dataset show the sales Volume of two different product lines (Premium vs. Standard) across various global regions.
+
+| Global Region (Long Name) | Premium Line ($k) | Standard Line ($k) |
+| --- | --- | --- |
+| North American Enterprise Sector | 850 | 600 |
+| European Union Strategic Markets | 780 | 550 |
+| Asia-Pacific Emerging Economies | 920 | 400 |
+| Latin American Growth Division | 450 | 300 |
+| Middle East and Africa Hub | 380 | 320 |
+| Scandinavian Research District | 310 | 280 |
+| United Kingdom Financial Core | 290 | 250 |
+
+---
+
+# Practical Exercise 5: clustered chart
+3. The Audience Question
+"When comparing both product lines Side-by-side, which regional office reached the highest Peak in sales volume?"
+
+Draw the most accurate visualization possible to answer the audience's question and follow the visualization guidelines.
+
+| Global Region (Long Name) | Premium Line ($k) | Standard Line ($k) |
+| --- | --- | --- |
+| North American Enterprise Sector | 850 | 600 |
+| European Union Strategic Markets | 780 | 550 |
+| Asia-Pacific Emerging Economies | 920 | 400 |
+| Latin American Growth Division | 450 | 300 |
+| Middle East and Africa Hub | 380 | 320 |
+| Scandinavian Research District | 310 | 280 |
+| United Kingdom Financial Core | 290 | 250 |
+
+---
+
+# Answers 5: clustered chart

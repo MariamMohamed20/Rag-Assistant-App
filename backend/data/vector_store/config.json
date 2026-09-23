@@ -1,0 +1,7 @@
+{
+  "embedding_model": "all-MiniLM-L6-v2",
+  "collection_name": "lecture_notes",
+  "chunk_size": 800,
+  "chunk_overlap": 150,
+  "top_k": 4
+}
