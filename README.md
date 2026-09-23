@@ -47,31 +47,24 @@ rebuilding it on every request.
 | Tests | pytest + FastAPI `TestClient` |
 
 ## Project Structure
-
-rag-assistant-project/
-├── data/raw_docs/ # 5 source documents (Data Viz lecture notes, .txt)
-├── notebooks/
-│ └── rag_pipeline.ipynb # load → chunk → embed → store → retrieve → generate → evaluate → export
-├── backend/
-│ ├── app/
-│ │ ├── main.py # FastAPI app, CORS, startup loading (lifespan)
-│ │ ├── api/routes/query.py # GET /health, POST /query
-│ │ ├── core/config.py # settings from .env
-│ │ ├── schemas/query.py # QueryRequest / QueryResponse
-│ │ ├── services/retrieval.py # loads vector store, retrieves chunks
-│ │ └── services/generation.py # calls Ollama, builds grounded answer
-│ ├── data/vector_store/ # populated by the notebook's Export step (2.7)
-│ ├── tests/test_query.py
-│ ├── requirements.txt
-│ ├── .env.example
-│ └── Dockerfile
-├── frontend/
-│ ├── app.py # Streamlit chat UI
-│ ├── api_client.py # wrapper for calling the backend
-│ ├── .env.example
-│ └── requirements.txt
-├── requirements.txt # for the notebook environment
-└── .gitignore
+- `data/raw_docs/` — 5 source documents (Data Viz lecture notes, .txt)
+- `notebooks/rag_pipeline.ipynb` — load → chunk → embed → store → retrieve → generate → evaluate → export
+- `backend/`
+  - `app/main.py` — FastAPI app, CORS, startup loading (lifespan)
+  - `app/api/routes/query.py` — GET /health, POST /query
+  - `app/core/config.py` — settings from .env
+  - `app/schemas/query.py` — QueryRequest / QueryResponse
+  - `app/services/retrieval.py` — loads vector store, retrieves chunks
+  - `app/services/generation.py` — calls Ollama, builds grounded answer
+  - `data/vector_store/` — populated by the notebook's Export step (2.7)
+  - `tests/test_query.py`
+  - `requirements.txt`, `.env.example`, `Dockerfile`
+- `frontend/`
+  - `app.py` — Streamlit chat UI
+  - `api_client.py` — wrapper for calling the backend
+  - `.env.example`, `requirements.txt`
+- `requirements.txt` — for the notebook environment
+- `.gitignore`
 
 
 ## Domain & Data
